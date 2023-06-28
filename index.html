@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Dog World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<a href="index.html"><img class="logo"src="dog4.png"></a>
+<h1>Dog World</h1>
+</header>
+<nav>
+    <button onclick=window.location.href="about.html">About</button><br>
+    <button onclick=window.location.href="health">Health</button><br>
+    <button onclick=window.location.href="breed">Breed</button><br>
+    <button onclick=window.location.href="training">Training</button><br>
+</nav>
+<section>
+    <div class="slideshow-container">
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="11.jpg">
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="22.jpg">
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="33.jpg">
+    </div>
+    
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <br>
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("mySlides");
+                      let dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+                    </script>
+</section>
+<footer>
+    <marquee direction="left">
+        Dogs are not our whole life, but they make our lives whole." 
+
+        "Happiness is a warm puppy." 
+        
+        "Money can buy you a fine dog, but only love can make him wag his tail."
+        
+        "The better I get to know men, the more I find myself loving dogs."
+        
+        "The greatest fear dogs know is the fear that you will not come back when you go out the door without them."
+        "A dog is the only thing on earth that loves you more than he loves himself."
+        
+        "Once you have had a wonderful dog, a life without one is a life diminished."
+        
+        "The world would be a nicer place if everyone had the ability to love as unconditionally as a dog."
+        
+        "No matter how little money and how few possessions you own, having a dog makes you rich."
+        
+        "Every dog has his day, unless he loses his tail, then he has a weak-end."
+      </marquee>
+</footer>
+</body>
+</html>
